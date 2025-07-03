@@ -1,7 +1,9 @@
-﻿namespace Task1.Services
+﻿using Task1.Models;
+
+namespace Task1.Services
 {
     public interface IEmployeeService
     {
-        Task GetEmployess();
+        Task<List<EmployeDto>> GetEmployess(string uri);
     }
 }

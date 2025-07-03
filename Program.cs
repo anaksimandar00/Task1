@@ -1,4 +1,6 @@
 
+using Task1.Services;
+
 namespace Task1
 {
     public class Program
@@ -13,6 +15,8 @@ namespace Task1
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddHttpClient();
+            builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
             var app = builder.Build();
 
